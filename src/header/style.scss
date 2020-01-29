@@ -1,0 +1,21 @@
+.main-header
+{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 0 50px;
+
+    color: #fff;
+    background-color: #20232a;
+}
+
+.header-title
+{
+    width: fit-content;
+    height: 50px;
+
+    line-height: 50px;
+}
