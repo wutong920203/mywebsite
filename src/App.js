@@ -1,7 +1,8 @@
 import React from 'react';
 import Header from "./header/header";
+import headImg from "./head-img.jpg";
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
@@ -21,8 +22,18 @@ function App() {
         </a>
       </header> */}
       <Header/>
-      <main>
-        
+      <main className="main">
+        <div className="img-container">
+          <img src={headImg} alt="head-img"></img>
+        </div>
+        <section className="post-list">
+          <div className="post-list-title">
+            最新发布
+          </div>
+          <div className="post-list-content">
+
+          </div>
+        </section>
       </main>
     </div>
   );
