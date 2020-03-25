@@ -2,7 +2,7 @@ import React from 'react';
 import Header from "./components/header/header";
 import BlogCard from "./components/blog-card/blog-card";
 import data from "./incomingData.json";
-import headImg from "./head-img.jpg";
+import headImg from "./assets/head-img.jpg";
 import logo from './logo.svg';
 import './App.scss';
 
