@@ -1,0 +1,46 @@
+.main-header
+{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    width: 100%;
+    height: 50px;
+    padding: 0 150px;
+
+    color: #fff;
+    background-color: #20232a;
+}
+
+.header-title
+{
+    width: fit-content;
+    margin-right: 20px;
+
+    line-height: 50px;
+}
+
+.sub-category 
+{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    height: 100%;
+    &:hover {
+        background-color: #000;
+    }
+
+    .link {
+        margin: 0 20px;
+
+        text-decoration:none;
+
+        color:#fff;
+    }
+}
