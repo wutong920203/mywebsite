@@ -7,10 +7,10 @@ class BlogCard extends React.Component {
 	// }
 
 	render() {
-		return <div>
-			<div className="title"></div>
-			<div className="description"></div>
-			<div className="detail"></div>
+		return <div className="blog-card">
+			<div className="blog-card-title">{this.props.title}</div>
+			<div className="blog-card-description">{this.props.description}</div>
+			<div className="blog-card-detail"></div>
 		</div>
 	};
 }
