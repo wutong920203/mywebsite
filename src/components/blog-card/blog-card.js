@@ -27,7 +27,6 @@ class BlogCard extends React.Component {
 				this.setState({
 					error
 				});
-				console.log(error);
 			}
 		)
 	}
