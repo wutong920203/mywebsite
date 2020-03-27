@@ -24,3 +24,4 @@ yarn-error.log*
 
 # article
 /src/articles
+/public/articles

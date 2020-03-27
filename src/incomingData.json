@@ -2,13 +2,13 @@
     "article": [
         {
             "title": "第一篇",
-            "description": "个人网站正在建设中...",
-            "url": "./articles/one.md"
+            "description": "大家好，欢迎来到我的博客。这是我的第一篇文章...",
+            "url": "/articles/One.md"
         },
         {
             "title": "啊哈哈",
             "description": "个人网站正在啊哈哈哈中...",
-            "url": "./articles/one.md"
+            "url": "/articles/One.md"
         }
     ]
 }

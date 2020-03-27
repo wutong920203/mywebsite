@@ -50,7 +50,11 @@ class App extends React.Component {
 						<div className="post-list-content">
 							{
 								this.state.article.map((item, i) => (
-									<BlogCard key={i} title={item.title} description={item.description}/>
+									<BlogCard key={i}
+											title={item.title}
+											description={item.description}
+											url={item.url}
+									/>
 								))
 							}
 						</div>
