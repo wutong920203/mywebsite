@@ -7,16 +7,16 @@ class Header extends React.Component {
 		this.state = {
 			category: [
 				"首页",
-				"图片"
+				"分类"
 			]
 		};
 	}
 
 	render() {
 		return <header className="main-header">
-			<div className="header-title">
+			<h1 className="header-title">
 				梧桐-个人博客
-			</div>
+			</h1>
 			{
 				this.state.category.map((item, i) => (
 					<div className="sub-category" key={i}>
