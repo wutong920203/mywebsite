@@ -23,11 +23,9 @@ class Home extends React.Component {
                     </div>
                     <div className="post-list-content">
                         {
-                            this.props.articleList.map((item, i) => (
-                                <BlogCard key={i}
-                                        title={item.title}
-                                        description={item.description}
-                                        id={item.id}
+                            this.props.articleList.map((article, i) => (
+                                <BlogCard key={i} articleDetails={article}
+                                        
                                 />
                             ))
                         }

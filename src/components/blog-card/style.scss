@@ -1,19 +1,39 @@
 .blog-card{
     margin: 20px;
+    padding: 20px;
 
     text-align: left;
 
     border: 1px solid #DCDCDC;
-    box-shadow: 5px 5px 3px #DCDCDC;
+    box-shadow: 5px 5px 3px #DCDCDC;;
 
     .blog-card-title {
-        margin: 20px 10px;
+        margin-bottom: 20px;
 
+        font-size: 18px;
         font-weight: bold;
     }
 
     .blog-card-description {
-        margin: 20px 10px;
+        margin-bottom: 20px;
+
+        font-size: 15px;
+    }
+
+    .blog-card-meta {
+        opacity: 0.6;
+
+        font-size: 14px;
+
+        .meta-item {
+            margin-right: 10px;
+        }
+    }
+
+    .meta-text {
+        margin-left: 3px;
+
+        vertical-align: middle;
     }
 
     a {

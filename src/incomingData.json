@@ -2,12 +2,16 @@
     "article": [
         {
             "title": "第一篇",
+            "author": "Tong",
+            "publishedTime": "03-28-2019",
             "id": "0000",
             "description": "大家好，欢迎来到我的博客。这是我的第一篇文章...",
             "url": "/articles/One.md"
         },
         {
             "title": "啊哈哈",
+            "author": "Kirin",
+            "publishedTime": "03-30-2019",
             "id": "0011",
             "description": "个人网站正在啊哈哈哈中...",
             "url": "/articles/One.md"
