@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from "./components/header/header";
+import Footer from "./components/footer/footer";
 import Home from "./home-landing";
 import BlogPost from "./components/blog/blog-post";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -44,6 +45,7 @@ class App extends React.Component {
 							<Route path="/blogs/:blogId" render={(props) => <BlogPost {...props} articleList={this.articleList}/>}/>
 						</Switch>
 					</main>
+					<Footer />
 				</div>
 			</Router>
 		);
