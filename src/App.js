@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
-import Home from "./home-landing";
+import Home from "./template/home-landing";
 import BlogPost from "./components/blog/blog-post";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import incomingData from "./incomingData.json";

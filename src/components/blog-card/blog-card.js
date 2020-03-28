@@ -14,7 +14,7 @@ class BlogCard extends React.Component {
 
 	render() {
 		return <div className="blog-card">
-			<Link to={"/blogs/"+this.props.id}>
+			<Link to={"/blogs/"+this.props.articleDetails.id}>
 				<div className="blog-card-title">{this.props.articleDetails.title}</div>
 				<div className="blog-card-description">{this.props.articleDetails.description}</div>
 				<IconContext.Provider value={{ className: 'react-icons' }}>

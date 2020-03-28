@@ -1,7 +1,7 @@
 import React from 'react';
-import BlogCard from "./components/blog-card/blog-card";
-import headImg from "./assets/head-img.jpg";
-import './App.scss';
+import BlogCard from "../components/blog-card/blog-card";
+import headImg from "../assets/head-img.jpg";
+import './style.scss';
 
 class Home extends React.Component {
 	constructor(props) {
@@ -24,9 +24,7 @@ class Home extends React.Component {
                     <div className="post-list-content">
                         {
                             this.props.articleList.map((article, i) => (
-                                <BlogCard key={i} articleDetails={article}
-                                        
-                                />
+                                <BlogCard key={i} articleDetails={article}/>
                             ))
                         }
                     </div>
