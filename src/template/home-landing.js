@@ -1,5 +1,6 @@
 import React from 'react';
 import BlogCard from "../components/blog-card/blog-card";
+import Carousel from "../components/carousel/carousel.js"
 import headImg from "../assets/head-img.jpg";
 import './style.scss';
 
@@ -14,9 +15,10 @@ class Home extends React.Component {
 	render() {
 		return (
             <div className="home-container">
-                <div className="img-container">
+                {/* <div className="img-container">
                     <img src={headImg} alt="head-img"></img>
-                </div>
+                </div> */}
+                <Carousel />
                 <section className="post-list">
                     <div className="post-list-title">
                         最新发布
