@@ -17,3 +17,14 @@ code {
 .react-icons {
 	vertical-align: middle;
 }
+
+button {
+    margin: 0;
+    padding: 0;
+
+    cursor: pointer;
+
+	border: 0;
+    border-radius: 0;
+    background: none;
+}

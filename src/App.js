@@ -3,6 +3,7 @@ import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import Home from "./template/home-landing";
 import BlogPost from "./components/blog/blog-post";
+import { IconContext } from "react-icons";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import incomingData from "./incomingData.json";
 import logo from './logo.svg';
@@ -35,17 +36,19 @@ class App extends React.Component {
 							Learn React
 						</a>
 					</header> */}
-					<Header/>
-					<div className="header-placeholder"></div>
-					<main className="main">
-						<Switch>
-							<Route exact path="/">
-								<Home articleList={this.articleList}/>
-							</Route>
-							<Route path="/blogs/:blogId" render={(props) => <BlogPost {...props} articleList={this.articleList}/>}/>
-						</Switch>
-					</main>
-					<Footer />
+					<IconContext.Provider value={{ className: 'react-icons' }}>
+						<Header/>
+						<div className="header-placeholder"></div>
+						<main className="main">
+							<Switch>
+								<Route exact path="/">
+									<Home articleList={this.articleList}/>
+								</Route>
+								<Route path="/blogs/:blogId" render={(props) => <BlogPost {...props} articleList={this.articleList}/>}/>
+							</Switch>
+						</main>
+						<Footer />
+					</IconContext.Provider>
 				</div>
 			</Router>
 		);

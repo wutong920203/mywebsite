@@ -1,5 +1,4 @@
 import React from 'react';
-import { IconContext } from "react-icons";
 import { IoMdPerson, IoMdTime } from "react-icons/io";
 import { Link } from "react-router-dom";
 import './style.scss';
@@ -17,12 +16,10 @@ class BlogCard extends React.Component {
 			<Link to={"/blogs/"+this.props.articleDetails.id}>
 				<div className="blog-card-title">{this.props.articleDetails.title}</div>
 				<div className="blog-card-description">{this.props.articleDetails.description}</div>
-				<IconContext.Provider value={{ className: 'react-icons' }}>
-					<div className="blog-card-meta">
-						<span className="meta-item"><IoMdPerson /><span className="meta-text">{this.props.articleDetails.author}</span></span>
-						<span className="meta-item"><IoMdTime /><span className="meta-text">{this.props.articleDetails.publishedTime}</span></span>
-					</div>
-				</IconContext.Provider>
+				<div className="blog-card-meta">
+					<span className="meta-item"><IoMdPerson /><span className="meta-text">{this.props.articleDetails.author}</span></span>
+					<span className="meta-item"><IoMdTime /><span className="meta-text">{this.props.articleDetails.publishedTime}</span></span>
+				</div>
 			</Link>
 		</div>
 	};
