@@ -1,7 +1,7 @@
 import React from 'react';
-import BlogCard from "../components/blog-card/blog-card";
-import Carousel from "../components/carousel/carousel.js"
-import profileImg from "../assets/IMG_0113.jpeg";
+import BlogCard from "../../components/blog-card/blog-card";
+import Carousel from "../../components/carousel/carousel.js"
+import profileImg from "../../assets/IMG_0113.jpeg";
 import './style.scss';
 
 class Home extends React.Component {
