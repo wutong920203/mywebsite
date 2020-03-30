@@ -1,9 +1,34 @@
+.home-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    padding: 10px 15px 0 15px;
+}
+
+.home-main {
+    flex: 0 1 auto;
+
+    width: 750px;
+    margin-right: 10px;
+}
+
+.home-aside {
+    flex: auto;
+
+    height: 500px;
+
+    border: 1px solid #DCDCDC;
+    background-color: #ffffff;
+}
+
 .post-list {
 	margin: 50px auto;
 
     text-align: left;
 
     border: 1px solid #DCDCDC;
+    background-color: #ffffff;
 
 	&-title {
 		height: 50px;
@@ -12,6 +37,7 @@
 		border-bottom: 1px solid #DCDCDC;
 		background-color: #F5F5F5;
 
+        font-size: 16px;
         line-height: 50px;
 	}
 

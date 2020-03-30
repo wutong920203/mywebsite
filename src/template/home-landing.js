@@ -14,19 +14,22 @@ class Home extends React.Component {
 	render() {
 		return (
             <div className="home-container">
-                <Carousel />
-                <section className="post-list">
-                    <div className="post-list-title">
-                        最新发布
-                    </div>
-                    <div className="post-list-content">
-                        {
-                            this.props.articleList.map((article, i) => (
-                                <BlogCard key={i} articleDetails={article}/>
-                            ))
-                        }
-                    </div>
-                </section>
+                <div className="home-main">
+                    <Carousel />
+                    <section className="post-list">
+                        <h2 className="post-list-title">
+                            文章
+                        </h2>
+                        <div className="post-list-content">
+                            {
+                                this.props.articleList.map((article, i) => (
+                                    <BlogCard key={i} articleDetails={article}/>
+                                ))
+                            }
+                        </div>
+                    </section>
+                </div>
+                <aside className="home-aside"></aside>
             </div>
         )
 	}
