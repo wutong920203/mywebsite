@@ -15,16 +15,16 @@ class Carousel extends React.Component {
 				url: "/blogs/0000",
 				alt: "test1"
 			},
-			{
-				img: "/head-img.jpg",
-				url: "/blogs/0000",
-				alt: "test2"
-			},
-			{
-				img: "/head-img.jpg",
-				url: "/blogs/0000",
-				alt: "test3"
-			},
+			// {
+			// 	img: "/head-img.jpg",
+			// 	url: "/blogs/0000",
+			// 	alt: "test2"
+			// },
+			// {
+			// 	img: "/head-img.jpg",
+			// 	url: "/blogs/0000",
+			// 	alt: "test3"
+			// },
 		];
 		this.carouselLength = this.items.length;
 	}

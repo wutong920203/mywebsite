@@ -38,7 +38,7 @@ class Home extends React.Component {
                             </div>
                             <div className="split-line"></div>
                             <div className="profile-description">
-                                Tong, 某快消品牌前端工程师，Eleanor的爸爸
+                                Tong, 快消品牌前端工程师，Eleanor的爸爸。现居美国。
                             </div>
                         </div>
                     </section>
