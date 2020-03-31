@@ -1,5 +1,4 @@
-.main-header
-{
+.main-header {
     position: fixed;
     z-index: 1;
     top: 0;
@@ -17,17 +16,16 @@
     background-color: #456;
 }
 
-.header-title
-{
+.header-title {
     width: fit-content;
     margin-right: 20px;
 
     font-size: 20px;
+    font-weight: bold;
     line-height: 50px;
 }
 
-.sub-category 
-{
+.sub-category {
     display: flex;
     align-items: center;
     flex-direction: row;

@@ -1,0 +1,23 @@
+.blog-article {
+	min-height: 1000px;
+	padding: 24px;
+
+	text-align: left;
+
+	border: 1px solid #DCDCDC;
+	background-color: #ffffff;
+
+	line-height: 1.75;;
+
+	h1 {
+		padding-bottom: 12px;
+
+		border-bottom: 1px solid #ececec;
+
+		font-size: 24px;
+	}
+
+	p {
+		font-size: 15px;
+	}
+}

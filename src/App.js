@@ -2,7 +2,7 @@ import React from 'react';
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import Home from "./template/home-landing/";
-import BlogPost from "./components/blog/blog-post";
+import BlogLanding from "./template/blog-landing/";
 import { IconContext } from "react-icons";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import incomingData from "./incomingData.json";
@@ -37,14 +37,14 @@ class App extends React.Component {
 						</a>
 					</header> */}
 					<IconContext.Provider value={{ className: 'react-icons' }}>
-						<Header/>
+						<Route path="/" render={(props) => <Header {...props}/>} />
 						<div className="header-placeholder"></div>
 						<main className="main">
 							<Switch>
 								<Route exact path="/">
 									<Home articleList={this.articleList}/>
 								</Route>
-								<Route path="/blogs/:blogId" render={(props) => <BlogPost {...props} articleList={this.articleList}/>}/>
+								<Route path="/blogs/:blogId" render={(props) => <BlogLanding {...props} articleList={this.articleList}/>}/>
 							</Switch>
 						</main>
 						<Footer />

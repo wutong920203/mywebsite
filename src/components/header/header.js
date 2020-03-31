@@ -13,18 +13,26 @@ class Header extends React.Component {
 	}
 
 	render() {
-		return <header className="main-header">
+		const { pathname } = this.props.location;
+		const siteTitle =  pathname === "/" ? 
 			<h1 className="header-title">
 				梧桐-个人博客
-			</h1>
-			{
-				this.state.category.map((item, i) => (
-					<div className="sub-category" key={i}>
-						<a href="/" className="link">{item}</a>
-					</div>
-				))
-			}
-		</header>
+			</h1> :
+			<div className="header-title">
+				梧桐-个人博客
+			</div>
+		return (
+			<header className="main-header">
+				{ siteTitle }
+				{
+					this.state.category.map((item, i) => (
+						<div className="sub-category" key={i}>
+							<a href="/" className="link">{item}</a>
+						</div>
+					))
+				}
+			</header>
+		)
 	};
 }
 
