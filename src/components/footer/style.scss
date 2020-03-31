@@ -1,19 +1,20 @@
-.main-footer
-{
-    // position: fixed;
-    // z-index: 1;
-    // top: 0;
-    // left: 0;
+.main-footer {
     display: flex;
-    align-items: center;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
 
     width: 100%;
     height: 100px;
     padding: 0 150px;
 
+    text-align: left;
+
     color: #666;
     background-color: #20232a;
 
     font-size: 14px;
+}
+
+.footer-text {
+    margin-bottom: 5px;
 }
