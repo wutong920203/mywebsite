@@ -45,6 +45,14 @@ a {
     box-sizing: border-box;
 }
 
+.split-line {
+	width: 100%;
+	height: 1px;
+	margin: 14px 0;
+
+	background-color: #eee;
+}
+
 @font-face {
     font-family: FZHei;
 
