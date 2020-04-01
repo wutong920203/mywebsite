@@ -21,7 +21,7 @@ class BlogPost extends React.Component {
 		return (
 			<div className="blog-article">
 				<article className="blog-content">
-					<ReactMarkdown source={this.state.content} />
+					<ReactMarkdown source={this.state.content} escapeHtml={false}/>
 				</article>
 			</div>
 		)

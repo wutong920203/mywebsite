@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import './style.scss';
 
 class Header extends React.Component {
@@ -23,7 +24,9 @@ class Header extends React.Component {
 			</div>
 		return (
 			<header className="main-header">
-				{ siteTitle }
+				<Link className="link" to="/">
+					{siteTitle}
+				</Link>
 				{
 					this.state.category.map((item, i) => (
 						<div className="sub-category" key={i}>
