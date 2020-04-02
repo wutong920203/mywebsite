@@ -1,0 +1,30 @@
+.external-links {
+	margin-bottom: 10px;
+	padding: 15px;
+
+	text-align: left;
+
+	border: 1px solid #DCDCDC;
+	background-color: #ffffff;
+}
+
+.external-links-title {
+	padding-left: 10px;
+}
+
+.external-links-list {
+	padding: 0 10px;
+
+	font-size: 16px;
+	line-height: 1.75;
+
+	.external-link {
+		margin: 10px 0;
+	}
+
+	.link-name {
+		margin-left: 5px;
+
+		vertical-align: middle;
+	}
+}

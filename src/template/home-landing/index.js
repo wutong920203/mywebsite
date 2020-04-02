@@ -2,6 +2,7 @@ import React from 'react';
 import BlogCard from "../../components/blog-card/blog-card";
 import Carousel from "../../components/carousel/carousel.js";
 import ProfileCard from "../../components/profile-card/";
+import ExternalLinks from "../../components/external-links/";
 import BulletinBoard from "../../components/bulletin-board/";
 import './style.scss';
 
@@ -20,7 +21,7 @@ class Home extends React.Component {
                     <BulletinBoard />
                     {/* <Carousel /> */}
                     <section className="post-list">
-                        <h2 className="post-list-title">
+                        <h2 className="post-list-title h2-style">
                             <span>文章</span>
                         </h2>
                         <div className="split-line"></div>
@@ -35,6 +36,7 @@ class Home extends React.Component {
                 </div>
                 <aside className="home-aside">
                     <ProfileCard />
+                    <ExternalLinks />
                 </aside>
             </div>
         )

@@ -8,7 +8,7 @@ class Header extends React.Component {
 		this.state = {
 			category: [
 				"首页",
-				"分类"
+				"关于"
 			]
 		};
 	}
