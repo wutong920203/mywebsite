@@ -19,7 +19,8 @@
 }
 
 .post-list {
-	margin: 50px auto;
+	margin: 10px auto;
+    padding: 15px;
 
     text-align: left;
 
@@ -27,14 +28,9 @@
     background-color: #ffffff;
 
 	&-title {
-		height: 50px;
-        padding: 0 20px;
-
-		border-bottom: 1px solid #DCDCDC;
-		background-color: #F5F5F5;
+        padding-left: 10px;
 
         font-size: 16px;
-        line-height: 50px;
 	}
 
 	&-content {

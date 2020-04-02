@@ -10,9 +10,9 @@
 .profile-head-portrait {
 	display: flex;
 	align-items: center;
-	// justify-content: center;
 
 	margin: 0 auto;
+	padding: 0 10px;
 
 	.profile-name {
 		margin-left: 10px;
@@ -30,6 +30,8 @@
 }
 
 .profile-description {
+	padding: 0 10px;
+
 	font-size: 14px;
 }
 

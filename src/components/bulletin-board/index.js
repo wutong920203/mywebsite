@@ -6,7 +6,7 @@ class BulletinBoard extends React.Component {
 		return (
             <section className="bulletin-board">
                 <h2 className="bulletin-board-title">
-                    <span>置顶</span>
+                    <span>公告板</span>
                 </h2>
                 <div className="split-line"></div>
                 <div className="bulletin-board-content">

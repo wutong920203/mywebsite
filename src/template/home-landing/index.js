@@ -18,11 +18,12 @@ class Home extends React.Component {
             <div className="home-container">
                 <div className="home-main">
                     <BulletinBoard />
-                    <Carousel />
+                    {/* <Carousel /> */}
                     <section className="post-list">
                         <h2 className="post-list-title">
-                            文章
+                            <span>文章</span>
                         </h2>
+                        <div className="split-line"></div>
                         <div className="post-list-content">
                             {
                                 this.props.articleList.map((article, i) => (
