@@ -1,9 +1,22 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import { IoLogoGoogle, IoLogoGithub, IoLogoYoutube, IoLogoTwitter, IoLogoFacebook } from "react-icons/io";
 import './style.scss';
 
 class ExternalLinks extends React.Component {
+    // constructor(props) {
+	// 	super(props);
+	// 	this.links = [
+    //         {
+    //             name: "Google",
+    //             url: "https://www.google.com/"
+    //         },
+    //         {
+    //             name: "GitHub",
+    //             url: "https://www.google.com/"
+    //         },
+    //     ]
+    // }
+
 	render() {
 		return (
             <section className="external-links">
@@ -12,26 +25,26 @@ class ExternalLinks extends React.Component {
                 </h2>
                 <div className="split-line"></div>
                 <div className="external-links-list">
-                    <div className="external-link">
+                    <a className="external-link" href="https://www.google.com/" target="_blank" rel="noopener noreferrer">
                         <IoLogoGoogle />
                         <span className="link-name">Google</span>
-                    </div>
-                    <div className="external-link">
+                    </a>
+                    <a className="external-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">
                         <IoLogoGithub />
                         <span className="link-name">GitHub</span>
-                    </div>
-                    <div className="external-link">
+                    </a>
+                    <a className="external-link" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
                         <IoLogoYoutube />
                         <span className="link-name">YouTube</span>
-                    </div>
-                    <div className="external-link">
+                    </a>
+                    <a className="external-link" href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
                         <IoLogoTwitter />
                         <span className="link-name">Twitter</span>
-                    </div>
-                    <div className="external-link">
+                    </a>
+                    <a className="external-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
                         <IoLogoFacebook />
                         <span className="link-name">Facebook</span>
-                    </div>
+                    </a>
                 </div>
             </section>
         )

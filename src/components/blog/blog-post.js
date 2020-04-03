@@ -15,6 +15,7 @@ class BlogPost extends React.Component {
 		const { blogId } = match.params;
 		const blog = articleList.find(element => element.id === blogId);
 		this.getMarkdown(blog.url);
+		this.setTitle(blog.title);
 	}
 
 	render() {
@@ -35,7 +36,6 @@ class BlogPost extends React.Component {
 				this.setState({
 					content: result
 				})
-				console.log(result)
 			},
 			// 注意：需要在此处处理错误
 			// 而不是使用 catch() 去捕获错误
@@ -46,6 +46,10 @@ class BlogPost extends React.Component {
 				});
 			}
 		)
+	}
+
+	setTitle (title) {
+		document.title = title
 	}
 }
 
