@@ -1,7 +1,8 @@
 import React from 'react';
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
-import ScrollToTop from "./components/scroll-to-top/";
+import Hoc from "./components/HOC/";
+import BackToTop from "./components/back-to-top/";
 import Home from "./template/home-landing/";
 import BlogLanding from "./template/blog-landing/";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -20,7 +21,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<Router>
-				<ScrollToTop>
+				<Hoc>
 					<div className="App">
 						<Route path="/" render={(props) => <Header {...props}/>} />
 						<div className="header-placeholder"></div>
@@ -32,9 +33,10 @@ class App extends React.Component {
 								<Route path="/blogs/:blogId" render={(props) => <BlogLanding {...props} articleList={this.articleList}/>}/>
 							</Switch>
 						</main>
+						<BackToTop />
 						<Footer />
 					</div>
-				</ScrollToTop>
+				</Hoc>
 			</Router>
 		);
 	}

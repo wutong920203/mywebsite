@@ -2,7 +2,7 @@ import React from "react";
 import { IconContext } from "react-icons";
 import { withRouter } from "react-router-dom";
 
-class ScrollToTop extends React.Component {
+class Hoc extends React.Component {
      componentDidUpdate(prevProps) {
          if (this.props.location !== prevProps.location) {
              window.scrollTo(0, 0);
@@ -18,4 +18,4 @@ class ScrollToTop extends React.Component {
      }
 }
 
-export default withRouter(ScrollToTop)
+export default withRouter(Hoc)
