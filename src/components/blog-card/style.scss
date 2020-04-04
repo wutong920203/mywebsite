@@ -19,6 +19,11 @@
 
         font-size: 15px;
         line-height: 1.75;
+
+        .double-quotation-marks {
+            font-size: 25px;
+            line-height: 1;
+        }
     }
 
     .blog-card-meta {
@@ -57,9 +62,8 @@
         margin-left: 3px;
         padding: 3px 5px;
 
-        border: 1px solid #CCFF00;
+        border: 1px solid;
         border-radius: 9px;
-        background-color: #CCFF00;
 
         .meta-text {
             margin-left: 0;

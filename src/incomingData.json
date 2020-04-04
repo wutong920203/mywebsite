@@ -7,7 +7,10 @@
             "publishedTime": "03-28-2019",
             "description": "做博客网站还有一个好处就是，万一我不在这个世界了，能在这个世界留下一点东西，后面的人看不看另说，留下点儿东西就好。当然前提是有人得给我这个域名和云服务续费，哈哈哈。",
             "url": "/articles/One.md",
-            "categoryTag": "闲谈",
+            "categoryTag": {
+                "title": "闲谈",
+                "color": "#CCFF00"
+            },
             "pinned": true
         },
         {
@@ -17,7 +20,10 @@
             "publishedTime": "03-30-2019",
             "description": "个人网站正在啊哈哈哈中...",
             "url": "/articles/One.md",
-            "categoryTag": "前端"
+            "categoryTag": {
+                "title": "前端",
+                "color": "#00CCFF"
+            }
         }
     ]
 }

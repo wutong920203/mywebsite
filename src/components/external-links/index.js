@@ -3,20 +3,6 @@ import { IoLogoGoogle, IoLogoGithub, IoLogoYoutube, IoLogoTwitter, IoLogoFaceboo
 import './style.scss';
 
 class ExternalLinks extends React.Component {
-    // constructor(props) {
-	// 	super(props);
-	// 	this.links = [
-    //         {
-    //             name: "Google",
-    //             url: "https://www.google.com/"
-    //         },
-    //         {
-    //             name: "GitHub",
-    //             url: "https://www.google.com/"
-    //         },
-    //     ]
-    // }
-
 	render() {
 		return (
             <section className="external-links">
