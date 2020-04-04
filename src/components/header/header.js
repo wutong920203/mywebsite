@@ -24,16 +24,18 @@ class Header extends React.Component {
 			</div>
 		return (
 			<header className="main-header">
-				<Link className="link" to="/">
-					{siteTitle}
-				</Link>
-				{
-					this.state.category.map((item, i) => (
-						<div className="sub-category" key={i}>
-							<a href="/" className="link">{item}</a>
-						</div>
-					))
-				}
+				<nav className="main-header-nav-container">
+					<Link className="link" to="/">
+						{siteTitle}
+					</Link>
+					{
+						this.state.category.map((item, i) => (
+							<div className="sub-category" key={i}>
+								<a href="/" className="link">{item}</a>
+							</div>
+						))
+					}
+				</nav>
 			</header>
 		)
 	};
