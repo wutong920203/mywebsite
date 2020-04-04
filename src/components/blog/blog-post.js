@@ -14,8 +14,8 @@ class BlogPost extends React.Component {
 		const { match, articleList } = this.props;
 		const { blogId } = match.params;
 		const blog = articleList.find(element => element.id === blogId);
-		this.getMarkdown(blog.url);
 		this.setTitle(blog.title);
+		this.getMarkdown(blog.url);
 	}
 
 	render() {

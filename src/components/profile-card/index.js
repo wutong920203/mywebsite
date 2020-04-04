@@ -15,7 +15,7 @@ class ProfileCard extends React.Component {
                     </div>
                     <div className="split-line"></div>
                     <div className="profile-description">
-                        <p>前端工程师，老罗铁粉，Eleanor的爸爸。喜爱数码产品，现居美国。</p>
+                        <p>前端工程师，老罗铁粉，老愤青，Eleanor的爸爸。喜爱数码产品，现居美国。</p>
                     </div>
                 </div>
             </section>

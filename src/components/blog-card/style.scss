@@ -10,7 +10,7 @@
     .blog-card-title {
         color: #404040;
 
-        font-size: 18px;
+        font-size: 26px;
         font-weight: bold;
     }
 
@@ -49,6 +49,27 @@
         margin-left: 3px;
 
         vertical-align: middle;
+    }
+
+    .category-tag {
+        display: inline;
+
+        margin-left: 3px;
+        padding: 3px 5px;
+
+        border: 1px solid #CCFF00;
+        border-radius: 9px;
+        background-color: #CCFF00;
+
+        .meta-text {
+            margin-left: 0;
+
+            vertical-align: bottom;
+
+            color: #000000;
+
+            font-weight: bold;
+        }
     }
 
     a {
