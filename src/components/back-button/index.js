@@ -39,10 +39,14 @@ class BackToTop extends React.Component {
     }
 
     updateButtonPosition() {
-        const clientWidth = document.body.clientWidth;
-        const MAIN_WIDTH = 1080;
+        const LARGE_WIDTH = 1180;
+        const MEDIUM_WIDTH = 960;
+        const WIDTH_THRESHOLD = 1250;
         const MAIN_PADDING = 15;
         const BUTTON_WIDTH = 50;
+
+        const clientWidth = document.body.clientWidth;
+        const MAIN_WIDTH = clientWidth > WIDTH_THRESHOLD ? LARGE_WIDTH : MEDIUM_WIDTH;
         const threshold = (clientWidth - MAIN_WIDTH)/2 - BUTTON_WIDTH + MAIN_PADDING;
         const left = threshold > 0 ? threshold : 0;
         this.setState({

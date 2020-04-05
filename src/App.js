@@ -25,7 +25,7 @@ class App extends React.Component {
 					<div className="App">
 						<Route path="/" render={(props) => <Header {...props}/>} />
 						<div className="header-placeholder"></div>
-						<main className="main">
+						<main className="main layout-responsive">
 							<Switch>
 								<Route exact path="/">
 									<Home articleList={this.articleList}/>

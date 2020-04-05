@@ -24,7 +24,7 @@ class Header extends React.Component {
 			</div>
 		return (
 			<header className="main-header">
-				<nav className="main-header-nav-container">
+				<nav className="main-header-nav-container layout-responsive">
 					<Link className="link" to="/">
 						{siteTitle}
 					</Link>

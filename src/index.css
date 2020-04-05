@@ -63,6 +63,12 @@ a {
 	background-color: #eee;
 }
 
+@media (max-width: 1250px) {
+	.App .layout-responsive {
+		width: 960px;
+	}
+}
+
 @font-face {
     font-family: FZHei;
 
