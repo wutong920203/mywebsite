@@ -1,15 +1,12 @@
 import React from 'react';
+import Block from '../../elements/block/';
 import { IoLogoGoogle, IoLogoGithub, IoLogoYoutube, IoLogoTwitter, IoLogoFacebook } from "react-icons/io";
 import './style.scss';
 
 class ExternalLinks extends React.Component {
 	render() {
 		return (
-            <section className="external-links">
-                <h2 className="external-links-title h2-style">
-                    <span>常用链接</span>
-                </h2>
-                <div className="split-line"></div>
+            <Block title="常用链接" containerClassName="external-links">
                 <div className="external-links-list">
                     <a className="external-link" href="https://www.google.com/" target="_blank" rel="noopener noreferrer">
                         <IoLogoGoogle />
@@ -32,7 +29,7 @@ class ExternalLinks extends React.Component {
                         <span className="link-name">Facebook</span>
                     </a>
                 </div>
-            </section>
+            </Block>
         )
 	}
 }

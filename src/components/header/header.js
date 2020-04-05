@@ -7,8 +7,14 @@ class Header extends React.Component {
 		super(props);
 		this.state = {
 			category: [
-				"首页",
-				"关于"
+				{
+					title: "首页",
+					url: "/"
+				},
+				{
+					title: "文章列表",
+					url: "/blogs"
+				}
 			]
 		};
 	}
@@ -17,10 +23,10 @@ class Header extends React.Component {
 		const { pathname } = this.props.location;
 		const siteTitle =  pathname === "/" ? 
 			<h1 className="header-title">
-				梧桐-个人博客
+				Tong - 个人博客
 			</h1> :
 			<div className="header-title">
-				梧桐-个人博客
+				Tong - 个人博客
 			</div>
 		return (
 			<header className="main-header">
@@ -31,7 +37,7 @@ class Header extends React.Component {
 					{
 						this.state.category.map((item, i) => (
 							<div className="sub-category" key={i}>
-								<a href="/" className="link">{item}</a>
+								<a href={item.url} className="link">{item.title}</a>
 							</div>
 						))
 					}

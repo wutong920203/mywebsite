@@ -9,31 +9,14 @@
 .home-main {
     flex: 1 1 auto;
 
+    width: 835px;
     margin-right: 10px;
 }
 
 .home-aside {
-    flex: none;
+    flex: 1 1 auto;
 
-    width: 290px;
-}
-
-.post-list {
-	margin: 10px auto;
-    padding: 15px;
-
-    text-align: left;
-
-    border: 1px solid #DCDCDC;
-    background-color: #ffffff;
-
-	&-title {
-        padding-left: 10px;
-	}
-
-	&-content {
-		min-height: 300px;
-	}
+    width: 305px;
 }
 
 .bulletin-board,
