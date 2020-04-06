@@ -69,6 +69,27 @@ a {
 	}
 }
 
+@media (max-width: 580px) {
+	.App .layout-responsive,
+	.App .home-main,
+	.App .home-aside {
+		width: 100%;
+	}
+
+	.App .home-main {
+		margin-bottom: 10px;
+	}
+
+	.App .home-container {
+		flex-direction: column;
+	}
+
+	.App .back-button {
+		width: 35px;
+		height: 35px;
+	}
+}
+
 @font-face {
     font-family: FZHei;
 

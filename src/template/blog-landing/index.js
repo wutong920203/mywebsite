@@ -8,11 +8,11 @@ import './style.scss';
 class BlogLanding extends React.Component {
 	render() {
 		return (
-			<div className="blog-container">
-				<div className="blog-main">
+			<div className="home-container">
+				<div className="home-main">
 					<BlogPost {...this.props}/>
 				</div>
-				<aside className="blog-aside">
+				<aside className="home-aside">
 					<ProfileCard />
 					<ExternalLinks />
 				</aside>
