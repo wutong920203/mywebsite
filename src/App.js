@@ -32,7 +32,7 @@ class App extends React.Component {
 									<Home articleList={this.articleList}/>
 								</Route>
 								<Route exact path="/blogs">
-									<BlogListLanding articleList={this.articleList}/>
+									<BlogListLanding articleList={this.articleList} title="文章列表"/>
 								</Route>
 								<Route path="/blogs/:blogId" render={(props) => <BlogLanding {...props} articleList={this.articleList}/>}/>
 							</Switch>

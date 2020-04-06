@@ -1,7 +1,6 @@
 import React from 'react';
 import BlogList from "../../components/blog-list/"
-import ProfileCard from "../../components/profile-card/";
-// import './style.scss';
+import './style.scss';
 
 class BlogListLanding extends React.Component {
 	constructor(props) {
@@ -18,7 +17,6 @@ class BlogListLanding extends React.Component {
                     <BlogList {...this.props}/>
                 </div>
                 <aside className="home-aside">
-                    <ProfileCard />
                 </aside>
             </div>
         )

@@ -1,6 +1,6 @@
 import React from 'react';
 import Block from '../../elements/block/';
-import profileImg from "../../assets/IMG_0113.jpeg";
+import profileImg from "../../assets/winnie.jpg";
 import './style.scss';
 
 class ProfileCard extends React.Component {
