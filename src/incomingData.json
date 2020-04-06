@@ -24,18 +24,6 @@
                 "title": "闲谈",
                 "color": "#CCFF00"
             }
-        },
-        {
-            "title": "网站的技术栈介绍",
-            "id": "0011",
-            "author": "Kirin",
-            "publishedTime": "03-30-2020",
-            "description": "个人网站正在啊哈哈哈中...",
-            "url": "/articles/One.md",
-            "categoryTag": {
-                "title": "前端",
-                "color": "#00CCFF"
-            }
         }
     ]
 }
