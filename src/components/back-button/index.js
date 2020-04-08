@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import { IoIosArrowRoundBack } from "react-icons/io";
+import { withRouter } from "react-router-dom";
 import './style.scss';
 
-class BackToTop extends React.Component {
+class BackButton extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -18,24 +18,18 @@ class BackToTop extends React.Component {
         this.updateButtonPosition();
         window.onresize = this.onResize;
     }
-
-    // componentDidUpdate(prevProps) {
-    //     console.log(this.props.location);
-    //     console.log(prevProps.location);
-    // }
     
 	render() {
 		return (
-            <Link className="link" to="/">
-                <div className="back-button" onClick={() => this.backToLastLevel()} style={{left: this.state.left+"px"}}>
-                    <IoIosArrowRoundBack />
-                </div>
-            </Link>
+            <div className="back-button" onClick={() => this.backToLastLevel()} style={{left: this.state.left+"px"}}>
+                <IoIosArrowRoundBack />
+            </div>
         )
     };
     
     backToLastLevel() {
-        console.log("test");
+        const { history } = this.props;
+        history.goBack();
     }
 
     updateButtonPosition() {
@@ -63,4 +57,4 @@ class BackToTop extends React.Component {
     }
 }
 
-export default BackToTop;
+export default withRouter(BackButton);

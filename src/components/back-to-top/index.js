@@ -38,7 +38,7 @@ class BackToTop extends React.Component {
     showButton() {
         const { pageYOffset } = window;
         this.setState({
-            isShowing: (pageYOffset > this.clientHeight)
+            isShowing: (pageYOffset > this.clientHeight/2)
         });
         this.ticking = false;
     }
