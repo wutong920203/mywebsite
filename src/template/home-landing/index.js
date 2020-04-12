@@ -1,9 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import BlogList from "../../components/blog-list/"
 import Carousel from "../../components/carousel/carousel";
 import ProfileCard from "../../components/profile-card/";
 import ExternalLinks from "../../components/external-links/";
 import BulletinBoard from "../../components/bulletin-board/";
+import { connect } from 'react-redux';
 import './style.scss';
 
 class Home extends React.Component {
@@ -28,4 +30,18 @@ class Home extends React.Component {
 	}
 }
 
-export default Home;
+const mapStateToProps = state => ({
+    status: state.site.status,
+    siteData: state.site.siteData,
+    blogList: state.site.blogList,
+})
+
+// const mapDispatchToProps = dispatch => bindActionCreators({requestGetSiteData}, dispatch)
+
+Home.propTypes = {
+    status: PropTypes.string,
+    siteData: PropTypes.object,
+    blogList: PropTypes.array
+}
+
+export default connect(mapStateToProps)(Home)

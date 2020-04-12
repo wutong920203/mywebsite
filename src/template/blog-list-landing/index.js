@@ -1,5 +1,7 @@
 import React from 'react';
 import BlogList from "../../components/blog-list/"
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types'
 import './style.scss';
 
 class BlogListLanding extends React.Component {
@@ -23,4 +25,15 @@ class BlogListLanding extends React.Component {
 	}
 }
 
-export default BlogListLanding;
+const mapStateToProps = state => ({
+    status: state.site.status,
+    blogList: state.site.blogList,
+})
+
+BlogListLanding.propTypes = {
+    status: PropTypes.string,
+    blogList: PropTypes.array
+}
+
+export default connect(mapStateToProps)(BlogListLanding)
+

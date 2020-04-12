@@ -6,8 +6,10 @@ import BackToTop from "./components/back-to-top/";
 import Home from "./template/home-landing/";
 import BlogListLanding from "./template/blog-list-landing/";
 import BlogLanding from "./template/blog-landing/";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import store from './store';
 import incomingData from "./incomingData.json";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { requestGetSiteData } from './reducers/site';
 import './App.scss';
 
 class App extends React.Component {
@@ -19,6 +21,10 @@ class App extends React.Component {
 		this.articleList = incomingData.article;
 	}
 
+	componentDidMount () {
+		store.dispatch(requestGetSiteData());
+	}
+
 	render() {
 		return (
 			<Router>
@@ -28,12 +34,8 @@ class App extends React.Component {
 						<div className="header-placeholder"></div>
 						<main className="main layout-responsive">
 							<Switch>
-								<Route exact path="/">
-									<Home articleList={this.articleList}/>
-								</Route>
-								<Route exact path="/blogs">
-									<BlogListLanding articleList={this.articleList} title="文章列表"/>
-								</Route>
+								<Route exact path="/" component={Home}/>
+								<Route exact path="/blogs" component={BlogListLanding} />
 								<Route path="/blogs/:blogId" render={(props) => <BlogLanding {...props} articleList={this.articleList}/>}/>
 							</Switch>
 						</main>

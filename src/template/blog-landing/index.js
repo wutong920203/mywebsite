@@ -1,8 +1,10 @@
 import React from 'react';
-import BlogPost from "../../components/blog/blog-post";
+import PropTypes from 'prop-types'
+import BlogPost from "../../components/blog-post/";
 import ProfileCard from "../../components/profile-card/";
 import ExternalLinks from "../../components/external-links/";
-import BackButton from "../../components/back-button/"
+import BackButton from "../../components/back-button/";
+import { connect } from 'react-redux';
 import './style.scss';
 
 class BlogLanding extends React.Component {
@@ -22,4 +24,20 @@ class BlogLanding extends React.Component {
 	}
 }
 
-export default BlogLanding;
+const mapStateToProps = state => ({
+    status: state.site.status,
+    siteData: state.site.siteData,
+    blogList: state.site.blogList,
+})
+
+// const mapDispatchToProps = dispatch => bindActionCreators({requestGetSiteData}, dispatch)
+
+BlogLanding.propTypes = {
+    status: PropTypes.string,
+    siteData: PropTypes.object,
+    blogList: PropTypes.array
+}
+
+export default connect(mapStateToProps)(BlogLanding)
+
+// export default BlogLanding;

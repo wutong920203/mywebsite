@@ -37,7 +37,7 @@ class Header extends React.Component {
 					{
 						this.state.category.map((item, i) => (
 							<div className="sub-category" key={i}>
-								<a href={item.url} className="link">{item.title}</a>
+								<Link to={item.url} className="link">{item.title}</Link>
 							</div>
 						))
 					}

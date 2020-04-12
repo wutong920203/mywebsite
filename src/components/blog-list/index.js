@@ -5,11 +5,12 @@ import './style.scss';
 
 class BlogList extends React.Component {
 	render() {
+        const blogList = this.props.blogList;
 		return (
             <Block title="文章" containerClassName="blog-list">
                 <div className="blog-list-content">
                     {
-                        this.props.articleList.map((article, i) => (
+                        blogList.map((article, i) => (
                             <BlogCard key={i} articleDetails={article}/>
                         ))
                     }
