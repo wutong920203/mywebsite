@@ -52,7 +52,7 @@ const failureGetSiteData = () => ({
 const requestGetSiteData = () => dispatch => {
 	dispatch(startGetSiteData());
 
-	return fetch("/site-data")
+	return fetch("/api/site-data")
 	.then(res => {
 		if (res.status >= 200 && res.status < 300) {
 			return Promise.resolve(res.json());

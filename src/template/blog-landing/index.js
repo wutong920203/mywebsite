@@ -37,7 +37,7 @@ class BlogLanding extends React.Component {
 	}
 
 	getMarkdown(blogId) {
-		fetch(`/md/${blogId}`)
+		fetch(`/api/md/${blogId}`)
 		.then(res => {
 			if (res.status >= 200 && res.status < 300) {
 				const title = res.headers.get("title");
