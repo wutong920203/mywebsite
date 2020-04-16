@@ -8,11 +8,24 @@ import { connect } from 'react-redux';
 import './style.scss';
 
 class BlogLanding extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			content: ""
+		};
+	}
+
+	componentDidMount() {
+		const { match } = this.props;
+		const { blogId } = match.params;
+		this.getMarkdown(blogId);
+	}
+
 	render() {
 		return (
 			<div className="home-container">
 				<div className="home-main">
-					<BlogPost {...this.props}/>
+					<BlogPost content={this.state.content}/>
 				</div>
 				<aside className="home-aside">
 					<ProfileCard />
@@ -22,6 +35,34 @@ class BlogLanding extends React.Component {
 			</div>
 		)
 	}
+
+	getMarkdown(blogId) {
+		fetch(`/md/${blogId}`)
+		.then(res => {
+			const title = res.headers.get("title");
+			this.setTitle(unescape(title));
+			return res.text();
+		})
+		.then(
+			(result) => {
+				this.setState({
+					content: result
+				})
+			},
+			// 注意：需要在此处处理错误
+			// 而不是使用 catch() 去捕获错误
+			// 因为使用 catch 去捕获异常会掩盖掉组件本身可能产生的 bug
+			(error) => {
+				this.setState({
+					error
+				});
+			}
+		)
+	}
+
+	setTitle (title) {
+		document.title = title
+	}
 }
 
 const mapStateToProps = state => ({
@@ -30,8 +71,6 @@ const mapStateToProps = state => ({
     blogList: state.site.blogList,
 })
 
-// const mapDispatchToProps = dispatch => bindActionCreators({requestGetSiteData}, dispatch)
-
 BlogLanding.propTypes = {
     status: PropTypes.string,
     siteData: PropTypes.object,
@@ -39,5 +78,3 @@ BlogLanding.propTypes = {
 }
 
 export default connect(mapStateToProps)(BlogLanding)
-
-// export default BlogLanding;

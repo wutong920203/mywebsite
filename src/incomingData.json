@@ -6,7 +6,6 @@
             "author": "Tong",
             "publishedTime": "03-28-2020",
             "description": "做博客网站还有一个好处就是，万一我不在这个世界了，能在这个世界留下一点东西，后面的人看不看另说，留下点儿东西就好。当然前提是有人得给我这个域名和云服务续费，哈哈哈。",
-            "url": "/articles/One.md",
             "categoryTag": {
                 "title": "闲谈",
                 "color": "#CCFF00"
@@ -19,7 +18,6 @@
             "author": "Tong",
             "publishedTime": "04-04-2020",
             "description": "这不就是克里斯滕森么？！",
-            "url": "/articles/Two.md",
             "categoryTag": {
                 "title": "闲谈",
                 "color": "#CCFF00"
@@ -31,7 +29,6 @@
             "author": "Kirin",
             "publishedTime": "03-30-2020",
             "description": "个人网站正在啊哈哈哈中...",
-            "url": "/articles/One.md",
             "categoryTag": {
                 "title": "前端",
                 "color": "#00CCFF"

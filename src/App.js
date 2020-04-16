@@ -36,7 +36,7 @@ class App extends React.Component {
 							<Switch>
 								<Route exact path="/" component={Home}/>
 								<Route exact path="/blogs" component={BlogListLanding} />
-								<Route path="/blogs/:blogId" render={(props) => <BlogLanding {...props} articleList={this.articleList}/>}/>
+								<Route path="/blogs/:blogId" component={BlogLanding}/>
 							</Switch>
 						</main>
 						<BackToTop />

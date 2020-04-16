@@ -5,12 +5,11 @@ import PropTypes from 'prop-types'
 import './style.scss';
 
 class BlogListLanding extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			article: []
-		};
-    }
+    componentDidMount() {
+		if (document.title !== "文章列表") {
+			this.setTitle("文章列表");
+		}
+	}
 
 	render() {
 		return (
@@ -22,6 +21,10 @@ class BlogListLanding extends React.Component {
                 </aside>
             </div>
         )
+    }
+    
+    setTitle (title) {
+		document.title = title
 	}
 }
 

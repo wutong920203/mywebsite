@@ -52,7 +52,7 @@ const failureGetSiteData = () => ({
 const requestGetSiteData = () => dispatch => {
 	dispatch(startGetSiteData());
 	  
-	return fetch("/test")
+	return fetch("/site-data")
 	.then(res => res.json())
 	.then(
 		(result) => {

@@ -9,39 +9,45 @@ import { connect } from 'react-redux';
 import './style.scss';
 
 class Home extends React.Component {
-	// constructor(props) {
-	// 	super(props);
-    // }
+	componentDidMount() {
+		if (document.title !== "Tong的博客") {
+			this.setTitle("Tong的博客");
+		}
+	}
 
 	render() {
 		return (
-            <div className="home-container">
-                <div className="home-main">
-                    <BulletinBoard />
-                    {/* <Carousel /> */}
-                    <BlogList {...this.props}/>
-                </div>
-                <aside className="home-aside">
-                    <ProfileCard />
-                    <ExternalLinks />
-                </aside>
-            </div>
-        )
+			<div className="home-container">
+				<div className="home-main">
+					<BulletinBoard />
+					{/* <Carousel /> */}
+					<BlogList {...this.props}/>
+				</div>
+				<aside className="home-aside">
+					<ProfileCard />
+					<ExternalLinks />
+				</aside>
+			</div>
+		)
+	}
+	
+	setTitle (title) {
+		document.title = title
 	}
 }
 
 const mapStateToProps = state => ({
-    status: state.site.status,
-    siteData: state.site.siteData,
-    blogList: state.site.blogList,
+	status: state.site.status,
+	siteData: state.site.siteData,
+	blogList: state.site.blogList,
 })
 
 // const mapDispatchToProps = dispatch => bindActionCreators({requestGetSiteData}, dispatch)
 
 Home.propTypes = {
-    status: PropTypes.string,
-    siteData: PropTypes.object,
-    blogList: PropTypes.array
+	status: PropTypes.string,
+	siteData: PropTypes.object,
+	blogList: PropTypes.array
 }
 
 export default connect(mapStateToProps)(Home)
