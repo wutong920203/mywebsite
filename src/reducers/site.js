@@ -51,14 +51,21 @@ const failureGetSiteData = () => ({
 
 const requestGetSiteData = () => dispatch => {
 	dispatch(startGetSiteData());
-	  
+
 	return fetch("/site-data")
-	.then(res => res.json())
+	.then(res => {
+		if (res.status >= 200 && res.status < 300) {
+			return Promise.resolve(res.json());
+		} else {
+			return Promise.reject(new Error(res.statusText));
+		}
+	})
 	.then(
 		(result) => {
 			dispatch(successGetSiteData(result))
 		},
 		(error) => {
+			console.log(error);
 			dispatch(failureGetSiteData())
 		}
 	);

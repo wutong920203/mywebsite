@@ -39,9 +39,13 @@ class BlogLanding extends React.Component {
 	getMarkdown(blogId) {
 		fetch(`/md/${blogId}`)
 		.then(res => {
-			const title = res.headers.get("title");
-			this.setTitle(unescape(title));
-			return res.text();
+			if (res.status >= 200 && res.status < 300) {
+				const title = res.headers.get("title");
+				this.setTitle(unescape(title));
+				return Promise.resolve(res.text());
+			} else {
+				return Promise.reject(new Error(res.statusText));
+			}
 		})
 		.then(
 			(result) => {
@@ -53,11 +57,12 @@ class BlogLanding extends React.Component {
 			// 而不是使用 catch() 去捕获错误
 			// 因为使用 catch 去捕获异常会掩盖掉组件本身可能产生的 bug
 			(error) => {
+				console.log(error);
 				this.setState({
 					error
 				});
 			}
-		)
+		);
 	}
 
 	setTitle (title) {
