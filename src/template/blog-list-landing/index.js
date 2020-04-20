@@ -6,8 +6,8 @@ import './style.scss';
 
 class BlogListLanding extends React.Component {
     componentDidMount() {
-		if (document.title !== "文章列表") {
-			this.setTitle("文章列表");
+		if (document.title !== "文章列表 - 猪式晦涩") {
+			this.setTitle("文章列表 - 猪式晦涩");
 		}
 	}
 

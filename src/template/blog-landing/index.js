@@ -50,7 +50,7 @@ class BlogLanding extends React.Component {
 		.then(res => {
 			if (res.status >= 200 && res.status < 300) {
 				const title = res.headers.get("title");
-				this.setTitle(unescape(title));
+				this.setTitle(unescape(title) + " - 猪式晦涩");
 				return Promise.resolve(res.text());
 			} else {
 				return Promise.reject(new Error(res.statusText));

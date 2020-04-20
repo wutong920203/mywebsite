@@ -23,10 +23,10 @@ class Header extends React.Component {
 		const { pathname } = this.props.location;
 		const siteTitle =  pathname === "/" ? 
 			<h1 className="header-title">
-				Tong - 个人博客
+				猪式晦涩
 			</h1> :
 			<div className="header-title">
-				Tong - 个人博客
+				猪式晦涩
 			</div>
 		return (
 			<header className="main-header">

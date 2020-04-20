@@ -10,8 +10,8 @@ import './style.scss';
 
 class Home extends React.Component {
 	componentDidMount() {
-		if (document.title !== "Tong的博客") {
-			this.setTitle("Tong的博客");
+		if (document.title !== "猪式晦涩") {
+			this.setTitle("猪式晦涩");
 		}
 	}
 
