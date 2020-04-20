@@ -1,5 +1,5 @@
 import React from 'react';
-import { IoMdPerson, IoMdTime, IoMdPricetag } from "react-icons/io";
+import MetaInfo from '../meta-info/';
 import { Link } from "react-router-dom";
 import './style.scss';
 
@@ -18,16 +18,7 @@ class BlogCard extends React.Component {
 					{articleDetails.description}
 					<span className="double-quotation-marks">”</span>
 				</div>
-				<div className="blog-card-meta">
-					{/* <span className="meta-item"><IoMdPerson /><span className="meta-text">{articleDetails.author}</span></span> */}
-					<span className="meta-item"><IoMdTime /><span className="meta-text">{articleDetails.publishedTime}</span></span>
-					<span className="meta-item category-tag-container">
-						<IoMdPricetag />
-						<div className="category-tag" style={{borderColor: articleDetails.categoryTag.color, backgroundColor: articleDetails.categoryTag.color}}>
-							<span className="meta-text">{articleDetails.categoryTag.title}</span>
-						</div>
-					</span>
-				</div>
+				<MetaInfo blogData={articleDetails}/>
 				{pinned}
 			</div>
 		)

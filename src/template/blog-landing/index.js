@@ -8,24 +8,33 @@ import { connect } from 'react-redux';
 import './style.scss';
 
 class BlogLanding extends React.Component {
-	constructor(props) {
+	constructor (props) {
 		super(props);
+		const { match } = this.props;
+		this.blogId  = match.params.blogId;
+		this.getBlogData = this.getBlogData.bind(this);
 		this.state = {
-			content: ""
+			content: "",
+			blogData: {}
 		};
 	}
 
-	componentDidMount() {
-		const { match } = this.props;
-		const { blogId } = match.params;
-		this.getMarkdown(blogId);
+	componentDidMount () {
+		this.getMarkdown(this.blogId);
+		this.getBlogData(this.props.blogList);
 	}
 
-	render() {
+	componentDidUpdate (previousProps) {
+		if (previousProps.blogList !== this.props.blogList) {
+			this.getBlogData(this.props.blogList);
+		}
+	}
+
+	render () {
 		return (
 			<div className="home-container">
 				<div className="home-main">
-					<BlogPost content={this.state.content}/>
+					<BlogPost content={this.state.content} blogData={this.state.blogData}/>
 				</div>
 				<aside className="home-aside">
 					<ProfileCard />
@@ -36,7 +45,7 @@ class BlogLanding extends React.Component {
 		)
 	}
 
-	getMarkdown(blogId) {
+	getMarkdown (blogId) {
 		fetch(`/api/md/${blogId}`)
 		.then(res => {
 			if (res.status >= 200 && res.status < 300) {
@@ -63,6 +72,15 @@ class BlogLanding extends React.Component {
 				});
 			}
 		);
+	}
+
+	getBlogData (blogList) {
+		const blogData = blogList.find((blog) => blog.id === this.blogId);
+		if (blogData) {
+			this.setState({
+				blogData
+			});
+		}
 	}
 
 	setTitle (title) {

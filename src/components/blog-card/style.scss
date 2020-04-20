@@ -26,16 +26,6 @@
         }
     }
 
-    .blog-card-meta {
-        opacity: 0.6;
-
-        font-size: 14px;
-
-        .meta-item {
-            margin-right: 10px;
-        }
-    }
-
     &-pinned-post-sign {
         position: absolute;
         top: -10px;
@@ -48,32 +38,6 @@
 
         font-size: 15px;
         font-weight: bold;
-    }
-
-    .meta-text {
-        margin-left: 3px;
-
-        vertical-align: middle;
-    }
-
-    .category-tag {
-        display: inline;
-
-        margin-left: 3px;
-        padding: 3px 5px;
-
-        border: 1px solid;
-        border-radius: 9px;
-
-        .meta-text {
-            margin-left: 0;
-
-            vertical-align: bottom;
-
-            color: #000000;
-
-            font-weight: bold;
-        }
     }
 
     a {
