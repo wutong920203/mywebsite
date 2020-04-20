@@ -49,8 +49,6 @@ class BlogLanding extends React.Component {
 		fetch(`/api/md/${blogId}`)
 		.then(res => {
 			if (res.status >= 200 && res.status < 300) {
-				const title = res.headers.get("title");
-				this.setTitle(unescape(title) + " - 猪式晦涩");
 				return Promise.resolve(res.text());
 			} else {
 				return Promise.reject(new Error(res.statusText));
@@ -80,11 +78,12 @@ class BlogLanding extends React.Component {
 			this.setState({
 				blogData
 			});
+			this.setTitle(blogData.title);
 		}
 	}
 
 	setTitle (title) {
-		document.title = title
+		document.title = `${title} - 猪式晦涩`;
 	}
 }
 
