@@ -9,6 +9,7 @@ const types = {
 const initState = {
 	status: '',
 	blogList: [],
+	weiboList: [],
 	siteData: {}
 };
 
@@ -23,6 +24,7 @@ export default (state = initState, action) => {
 			return {
 				status: 'success',
 				blogList: action.data.article,
+				weiboList: action.data.weibo,
 				siteData: action.data
 			};
 		case types.FAILURE_GET_SITE_DATA:

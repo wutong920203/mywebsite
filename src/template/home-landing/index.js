@@ -5,6 +5,7 @@ import Carousel from "../../components/carousel/carousel";
 import ProfileCard from "../../components/profile-card/";
 import ExternalLinks from "../../components/external-links/";
 import BulletinBoard from "../../components/bulletin-board/";
+import Weibo from "../../components/weibo";
 import { connect } from 'react-redux';
 import './style.scss';
 
@@ -20,6 +21,7 @@ class Home extends React.Component {
 			<div className="home-container">
 				<div className="home-main">
 					<BulletinBoard />
+					<Weibo weiboList={this.props.weiboList}/>
 					{/* <Carousel /> */}
 					<BlogList {...this.props}/>
 				</div>
@@ -40,6 +42,7 @@ const mapStateToProps = state => ({
 	status: state.site.status,
 	siteData: state.site.siteData,
 	blogList: state.site.blogList,
+	weiboList: state.site.weiboList
 })
 
 // const mapDispatchToProps = dispatch => bindActionCreators({requestGetSiteData}, dispatch)
@@ -47,7 +50,8 @@ const mapStateToProps = state => ({
 Home.propTypes = {
 	status: PropTypes.string,
 	siteData: PropTypes.object,
-	blogList: PropTypes.array
+	blogList: PropTypes.array,
+	weiboList: PropTypes.array
 }
 
 export default connect(mapStateToProps)(Home)
